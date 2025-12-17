@@ -4,8 +4,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
+    <style>
+    body{
+        background-color:aquamarine
+    }
+    .tag{
+    display:inline;
+    width:60px;
+    height:50px;
+     margin-left:60px;
+     margin-top:0px;
+     padding-top:0px;
+     text-align:center;
+}
+.icon{
+    position:absolute;  
+    top:0px;
+    left:0px;
+    margin-top:0px;
+    height:50px;
+    width:50px;
+    border-radius:20px;
+       
+}
+    .search{
+        margin-top:15px;
+        width:100%;
+        height:25px;
+        margin-bottom:12px;
+    }
+    .search-sticky{
+        position: -webkit-sticky;
+        position:sticky;
+        top:2px;
+        background-color:white;
+        z-index:1000;
+    }
+    search:hover{
+    border-color:black;
+    border-style:double;
+    font-size:50px;
+    }
+    nav{
+        margin-bottom:10px;
+    }
+    nav a{
+        text-decoration:none;
+        margin-top:10px;
+        margin-right:20px;
+        font-size:20px;
+        border:2px ;
+        border-color:rgb(21, 6, 6);
+        border-style:double;
 
+    }
+    nav a:hover{
+        background-color:rgb(13, 224, 80);
+        border-color:white;
+
+        font-size:25px;
+
+    }
+    .chat{
+        margin-top:20px;
+        border-color:rgb(33, 33, 177);
+        border-style:double;
+        border-radius:50px;
+
+    }
+    .chats{
+        float:left;
+        height:400px;
+        width:55%;
+    }
+
+    .main-footer{
+        position:fixed;
+        bottom:0%;
+        width:100%;
+        background-color:lightgrey;
+        text-align:center;
+        margin-top:30px;
+        font-size:15px;
+    }
+    .sample{
+    position:"static"  ;
+    left:0px;
+    margin-top:0px;
+    height:50px;
+    width:50px;
+    border-radius:20px;
+    }
+    .sample2{
+         margin-top:20px;
+        border-color:rgb(33, 33, 177);
+        border-style:double;
+        border-radius:50px;
+        background-color:pink;
+    }
+    .sample2:hover{
+        background-color:white;
+
+    }
+</style>
+</head>
+
+<body>
+   
+
+    <div>
+       <img src="icon.jpg" class="icon">
+    <h1 class="tag">HappyChat</h1></div>
+    <div>
+    <input type="text" placeholder="Ask Meta AI or Search"  class="search">
+    </div>
+<div class="search-sticky">
+    <nav>
+        <a href="ALL.html">All</a> 
+        <a href="Unred.html">Unread</a> 
+        <a href="Favourites.html">Favorites</a>
+        <a href="Friends.html">Friends</a>
+    </nav>
+</div>
+<div class="chats">
+   <div class="sample2">
+    <img src="icon.jpg" class="sample">
+    <h1 class="tag" style="font-size:20px;">User1</h1>
+    </div>
+    <div class="sample2">
+    <img src="icon.jpg" class="sample">
+    <h1 class="tag" style="font-size:20px;">User2</h1>
+    </div>
+    <div class="sample2">
+    <img src="icon.jpg" class="sample">
+    <h1 class="tag" style="font-size:20px;">User3</h1>
+    </div>
+    <div class="sample2">
+    <img src="icon.jpg" class="sample">
+    <h1 class="tag" style="font-size:20px;">User4</h1>
+    </div>
+    <div class="sample2">
+    <img src="icon.jpg" class="sample">
+    <h1 class="tag" style="font-size:20px;">User5</h1>
+    </div>
+    <div class="sample2">
+    <img src="icon.jpg" class="sample">
+    <h1 class="tag" style="font-size:20px;">User6</h1>
+    </div>
+    <div class="sample2">
+    <img src="icon.jpg" class="sample">
+    <h1 class="tag" style="font-size:20px;">User7</h1>
+    </div>
+    <div class="sample2">
+    <img src="icon.jpg" class="sample">
+    <h1 class="tag" style="font-size:20px;">User8</h1>
+    </div>
+    <div class="sample2">
+    <img src="icon.jpg" class="sample">
+    <h1 class="tag" style="font-size:20px;">User9</h1>
+    </div>
+</div>
+<footer>
+    <p class="main-footer">Copyright © 2025 HappyChat Inc.</p>
+</footer>
 </body>
 </html>
