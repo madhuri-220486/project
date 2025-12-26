@@ -1,20 +1,16 @@
-.tag{
-    display:inline;
-    width:60px;
-    height:50px;
-     margin-left:60px;
-     margin-top:0px;
-     border:2px solid red;
-     padding-top:0px;
-     text-align:center;
-}
-.icon{
-    position:absolute;  
-    top:0px;
-    left:0px;
-    margin-top:0px;
-    height:2px;
-    width:2px;
-    border:2px solid blue; 
+.table1{
+    background-color: rgb(228, 219, 221);
     
-}
+} 
+.table1 tr:nth-child(odd) {
+    border-bottom:2px solid rgb(31, 27, 26);
+    
+}   
+.table2 tr:nth-child(even){
+    border-bottom:1px solid rgba(194, 223, 32, 0.733);
+    background-color:rgba(0, 211, 46, 0.623);
+} 
+.table2 tr:nth-child(odd){
+    border-bottom:1px solid rgba(194, 223, 32, 0.473);
+    background-color:rgba(135, 207, 235, 0.493);
+} 
