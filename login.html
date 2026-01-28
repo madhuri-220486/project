@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Login Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: rgb(200, 220, 240);
+                font-family: Arial, sans-serif;
+            }
+            .login-container {
+                width: 30%;
+                margin: 100px auto;
+                padding: 20px;
+                background-color: white;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+            }
+            .login-container h2 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .login-container input[type="text"],
+            .login-container input[type="password"] {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            .login-container input[type="submit"] {
+                width: 100%;
+                padding: 10px;
+                background-color: #28a745;
+                border: none;
+                color: white;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            .login-container input[type="reset"] {
+                width: 100%;
+                padding: 10px;
+                background-color: #28a745;
+                border: none;
+                color: white;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+            .login-container input[type="submit"]:hover {
+                background-color: #218838;
+            }
+            .login-container input[type="reset"]:hover {
+                background-color: #218838;
+            }
+             
+        </style>
+    </head>
+    <body>
+        <div class="login-container" >
+            <h2>Login With Password</h2>
+            <form method="post" action="login.php">
+            
+            <label>User Name:  </label><input type="text" name="username" placeholder="enter your name" required>
+            <label>Password:  </label><input type="password" name="password" placeholder="enter password" required>
+            <button type="submit">Login</button>
+            <!-- <input type="reset" name="name" value="Reset"> -->
+            </form>
+        </div>
+    </body>
+</html>

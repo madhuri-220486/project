@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+    <head>
+        <title>registration Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: rgb(200, 220, 240);
+                font-family: Arial, sans-serif;
+            }
+            .register-container {
+                width: 30%;
+                margin: 100px auto;
+                padding: 20px;
+                background-color: white;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+            }
+            .register-container h2 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .register-container input[type="text"],
+            .register-container input[type="password"],
+            .register-container input[type="email"] {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            .register-container input[type="submit"] {
+                width: 100%;
+                padding: 10px;
+                background-color: #28a745;
+                border: none;
+                color: white;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            .register-container input[type="reset"] {
+                width: 100%;
+                padding: 10px;
+                background-color: #28a745;
+                border: none;
+                color: white;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+            .register-container input[type="submit"]:hover {
+                background-color: #218838;
+            }
+            .register-container input[type="reset"]:hover {
+                background-color: #218838;
+            }
+             
+        </style>
+    </head>
+    <body>
+        <div class="register-container" >
+            <form method="post" action="register.php">
+            <h2>Signup form</h2>
+            <label>User Name:  </label><input type="text" name="name" placeholder="enter your name" required>
+            <label>Email :</label><input type="email" name="mail" required>
+            <label>Password:  </label><input type="password" name="password" placeholder="enter password" required>
+            <input type="submit" name="name" value="Register">
+            
+            </form>
+            <p style=" color:rgb(182, 83, 83); ">
+                your password must be at least 8 characters long.Include a mix of upper and lower case letters,numbers,and special characters.
+            </p>
+            <span>do you have an account <a href="login.html">login</a></span>
+        </div>
+    </body>
+</html>
