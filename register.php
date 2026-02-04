@@ -2,7 +2,14 @@
 include "db.php";
 
 $username = $_POST['username'];
-$email    = $_POST['email'];
+// cleaning email and password 
+$username=trim($username);
+$username=stripslashes($username);
+$username=strtolower($username);
+$username=ucfirst($username);
+$email= $_POST['email'];
+$email=trim($email);
+$email=stripslashes($email);
 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
 $query = "INSERT INTO users (username, email, password)
