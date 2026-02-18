@@ -220,5 +220,25 @@
 <footer>
     <p class="main-footer">Copyright © 2025 HappyChat Inc.</p>
 </footer>
+<button onclick="initializeApp()" id="myBtn" title="login">login</button>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCtb-uBntGMz7mraiGm7Ij7OMlK83mIGMs",
+    authDomain: "project-ff028.firebaseapp.com",
+    projectId: "project-ff028",
+    storageBucket: "project-ff028.firebasestorage.app",
+    messagingSenderId: "89990518640",
+    appId: "1:89990518640:web:b6c3e5460d9d06c274a1b5"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
 </body>
 </html>
