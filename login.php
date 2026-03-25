@@ -10,8 +10,8 @@ require 'vendor/autoload.php';   // adjust path if needed
 
 // ---------------- GOOGLE LOGIN SETUP ----------------
 $client = new Google_Client();
-$client->setClientId('792192836400-elt42pjs2n4gu8v910g8t9o5b46j2gl8.apps.googleusercontent.com');
-$client->setClientSecret('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');
+// $client->setClientId('792192836400-elt42pjs2n4gu8v910g8t9o5b46j2gl8.apps.googleusercontent.com');
+// $client->setClientSecret('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');
 $client->setRedirectUri('http://localhost/project/OAuth2.0/google_auth.php');
 $client->addScope("email");
 $client->addScope("profile");
