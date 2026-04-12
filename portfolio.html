@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madhuri Dasari | Portfolio</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-color: #0d6efd; /* Blue */
+            --accent-color: #1a1a1a;  /* Black */
+            --light-bg: #f8f9fa;      /* Light Gray */
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--accent-color);
+            line-height: 1.6;
+            padding-top: 76px; /* For fixed navbar */
+            /* Smooth scrolling */
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--accent-color) !important;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: #555 !important;
+            margin: 0 5px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-color) !important;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            height: calc(100vh - 76px);
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            background-color: var(--light-bg);
+            position: relative;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-tagline {
+            font-size: 1.25rem;
+            color: #444;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            max-width: 600px;
+        }
+
+        /* Section Padding */
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        /* Cards and Hover Effects */
+        .custom-card {
+            border: none;
+            border-radius: 12px;
+            background: var(--white);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .custom-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        /* Progress Bars */
+        .progress {
+            height: 8px;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+            background-color: #e9ecef;
+        }
+
+        .progress-bar {
+            background-color: var(--primary-color);
+            border-radius: 4px;
+        }
+
+        .skill-title {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Forms */
+        .form-control {
+            padding: 0.75rem 1rem;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.1);
+        }
+
+        /* Buttons */
+        .btn-custom-outline {
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+            font-weight: 500;
+            padding: 0.5rem 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom-outline:hover {
+            background-color: var(--accent-color);
+            color: var(--white);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .social-link {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100" tabindex="0">
+
+    <!-- 1. Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+            <!-- Edit Name Here -->
+            <a class="navbar-brand" href="#home">Madhuri Dasari</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <!-- Edit Hero Content Here -->
+                    <p class="text-primary fw-bold mb-2">Hello, I'm</p>
+                    <h1 class="hero-title">Madhuri Dasari</h1>
+                    <h2 class="hero-subtitle">Aspiring Software Developer</h2>
+                    <p class="hero-tagline">"Building simple, efficient, and user-friendly web applications."</p>
+                    
+                    <div class="d-flex gap-3">
+                        <a href="#projects" class="btn btn-primary px-4 py-2 rounded-3 fw-medium">View Projects</a>
+                        <a href="#contact" class="btn btn-custom-outline">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center text-md-start">
+                    <!-- Edit About Content Here -->
+                    <p class="lead text-muted mb-4">
+                        I am a passionate software developer with an interest in web development and problem solving. I enjoy creating clean and responsive websites using modern technologies.
+                    </p>
+                    <p class="text-muted">
+                        I am constantly learning new tools and frameworks to expand my skillset and build better solutions. Whether it's designing a responsive frontend or building a robust backend, I focus on writing clean, efficient, and maintainable code.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Skills Section -->
+    <section id="skills" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="row g-4">
+                
+                <!-- Frontend Skills -->
+                <div class="col-md-4">
+                    <div class="custom-card card p-4">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4"><i class="bi bi-window-sidebar text-primary me-2"></i>Frontend</h4>
+                            <!-- Edit Skills Here -->
+                            <div class="skill-item">
+                                <div class="skill-title"><span>HTML</span></div>
+                                <div class="progress"><div class="progress-bar w-100"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-title"><span>CSS</span></div>
+                                <div class="progress"><div class="progress-bar w-100"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-title"><span>JavaScript</span></div>
+                                <div class="progress"><div class="progress-bar" style="width: 80%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-title"><span>Bootstrap</span></div>
+                                <div class="progress"><div class="progress-bar w-100"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Skills -->
+                <div class="col-md-4">
+                    <div class="custom-card card p-4">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4"><i class="bi bi-server text-primary me-2"></i>Backend</h4>
+                            <!-- Edit Skills Here -->
+                            <div class="skill-item">
+                                <div class="skill-title"><span>Node.js</span></div>
+                                <div class="progress"><div class="progress-bar" style="width: 70%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-title"><span>MongoDB</span></div>
+                                <div class="progress"><div class="progress-bar" style="width: 75%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="col-md-4">
+                    <div class="custom-card card p-4">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4"><i class="bi bi-tools text-primary me-2"></i>Tools</h4>
+                            <!-- Edit Skills Here -->
+                            <div class="skill-item">
+                                <div class="skill-title"><span>Git</span></div>
+                                <div class="progress"><div class="progress-bar" style="width: 85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-title"><span>GitHub</span></div>
+                                <div class="progress"><div class="progress-bar" style="width: 90%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Projects Section -->
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="row g-4">
+                
+                <!-- Project 1 -->
+                <div class="col-md-4">
+                    <div class="custom-card card">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <!-- Edit Project Details Here -->
+                            <h5 class="card-title fw-bold mb-3">Loan Management System</h5>
+                            <p class="card-text text-muted mb-4 flex-grow-1">A web application to manage loan applications and user data efficiently.</p>
+                            
+                            <div class="mb-4">
+                                <span class="badge bg-light text-dark border me-1">HTML</span>
+                                <span class="badge bg-light text-dark border me-1">CSS</span>
+                                <span class="badge bg-light text-dark border me-1">JavaScript</span>
+                                <span class="badge bg-light text-dark border mt-1">MongoDB</span>
+                            </div>
+                            
+                            <a href="https://github.com/yourusername/loan-management" target="_blank" class="btn btn-outline-primary w-100 rounded-3">
+                                <i class="bi bi-github me-2"></i>View Source
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-md-4">
+                    <div class="custom-card card">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <!-- Edit Project Details Here -->
+                            <h5 class="card-title fw-bold mb-3">Personal Portfolio</h5>
+                            <p class="card-text text-muted mb-4 flex-grow-1">A responsive personal portfolio to showcase my skills and projects.</p>
+                            
+                            <div class="mb-4">
+                                <span class="badge bg-light text-dark border me-1">HTML</span>
+                                <span class="badge bg-light text-dark border me-1">CSS</span>
+                                <span class="badge bg-light text-dark border">Bootstrap</span>
+                            </div>
+                            
+                            <a href="https://yourportfolio.com" target="_blank" class="btn btn-primary w-100 rounded-3">
+                                <i class="bi bi-box-arrow-up-right me-2"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-md-4">
+                    <div class="custom-card card">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <!-- Edit Project Details Here -->
+                            <h5 class="card-title fw-bold mb-3">EMI Calculator</h5>
+                            <p class="card-text text-muted mb-4 flex-grow-1">A simple calculator to compute EMI values based on user input.</p>
+                            
+                            <div class="mb-4">
+                                <span class="badge bg-light text-dark border me-1">JavaScript</span>
+                                <span class="badge bg-light text-dark border me-1">HTML</span>
+                                <span class="badge bg-light text-dark border">CSS</span>
+                            </div>
+                            
+                            <button class="btn btn-outline-secondary w-100 rounded-3" disabled>
+                                Local Project
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Contact Section -->
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="custom-card card p-4 p-md-5">
+                        <div class="row g-4">
+                            <!-- Contact Info -->
+                            <div class="col-md-5">
+                                <h4 class="mb-4">Get In Touch</h4>
+                                <p class="text-muted mb-4">Feel free to reach out to me for any opportunities or just to say hi!</p>
+                                
+                                <!-- Edit Contact Info Here -->
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                        <i class="bi bi-envelope-fill text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0 fw-bold">Email</p>
+                                        <a href="mailto:madhuri@example.com" class="text-muted text-decoration-none">madhuri@example.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Contact Form -->
+                            <div class="col-md-7 border-md-start ps-md-4">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="name" placeholder="John Doe" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="john@example.com" required>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="message" class="form-label">Message</label>
+                                        <textarea class="form-control" id="message" rows="4" placeholder="Your message here..." required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary px-4 py-2 rounded-3 w-100 fw-medium">Send Message</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="mb-4">
+                <!-- Edit Social Links Here -->
+                <a href="https://github.com/yourusername" target="_blank" class="social-link"><i class="bi bi-github"></i></a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link"><i class="bi bi-linkedin"></i></a>
+                <a href="mailto:madhuri@example.com" class="social-link"><i class="bi bi-envelope-fill"></i></a>
+            </div>
+            <p class="mb-0 text-white-50">&copy; <span id="year"></span> Madhuri Dasari. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 2px 15px rgba(0,0,0,0.1)';
+            } else {
+                navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
+            }
+        });
+    </script>
+</body>
+</html>
